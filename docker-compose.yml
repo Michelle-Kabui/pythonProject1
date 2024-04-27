@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  server1:
+    image: my-dev-env
+    container_name: server1
+    ports:
+      - "5001:5000"
+    environment:
+      - SERVER_ID=1
+
+  server2:
+    image: my-dev-env
+    container_name: server2
+    ports:
+      - "5002:5000"
+    environment:
+      - SERVER_ID=2
+
+  server3:
+    image: my-dev-env
+    container_name: server3
+    ports:
+      - "5003:5000"
+    environment:
+      - SERVER_ID=3
+
+  load_balancer:
+    image: my-dev-env
+    container_name: load_balancer
+    ports:
+      - "5004:5000"
